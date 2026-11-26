@@ -1,0 +1,192 @@
+
+/* 1. Allgemeine Einstellungen */
+
+body {
+    margin: 0 ;                                     /*إزالة هوامش الصفحة */
+    font-family: Arial, sans-serif;
+    text-align: center; 
+
+    min-height: 100vh;                               /* أقل ارتفاع يساوي ارتفاع الشاشة */
+
+    background-image: url("images/background.png");
+      background-size: cover;                    /* تغطية كامل الصفحة */
+      background-repeat: no-repeat;                 /* منع تكرارها */
+}
+
+/* Hauptcontainer */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    min-height: 90vh;
+}
+
+/* Spielinhalt in der Mitte */
+.game-content {
+    flex: 1;                        /* اللعبة تأخذ المساحة المتبقية */
+    min-width: 0;
+     display: grid;
+    justify-items: center; 
+     align-content: center;                 /* منع تمدد الصفوف وتوسيطها */
+    gap: 15px; 
+}
+
+/* 2. Header */
+.game-header h1 {
+    margin: 30px 0 0 0;
+    font-size: 100px;
+    color: #7655ac;
+     padding-top: 20px;                     /* مسافة داخلية */
+}
+
+
+/* 4. Spieler */
+.players {
+    display: flex; 
+    align-items: center;
+     font-size: 30px;
+    gap: 30px;                          /* المسافة بين العناصر داخل العنصر */
+    
+}
+
+.player {
+    padding :0 40px;
+   
+}
+
+.player-X {
+    color: #4e85d8;
+}
+
+.player-O {
+    color: #bf54a2;
+}
+
+
+/* 5. Spielstatus */
+#game-status {
+    font-size: 20px;
+    color: #7655ac;
+    margin:0;
+    padding: 10px 0;
+}
+
+/* 7. Spielfeld */
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: repeat(3, 1fr);
+
+    width: 350px;
+    height: 350px;
+    gap: 10px;
+}
+
+
+/* 8. Spielfelder */
+.cell {
+    background-color: white;
+    border: 3px solid #b8a0e3;
+    border-radius: 15px;
+
+    cursor: pointer;
+    font-size: 50px;
+    color: #7655ac;
+}
+
+
+/* 9. Roboter */
+/* Beide Roboter */
+.robot {
+    width: 100%;                    /* عرض العمود كاملاً */
+    height: 85vh;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Blauer Roboter links */
+.robot-left {
+    background-image: url("images/robot-blue.png");
+}
+
+/* Lila Roboter rechts */
+.robot-right {
+    background-image: url("images/robot-purple.png");
+}
+
+
+/* 10. Start-Button */
+
+#start-btn {
+    margin : 10px 0;
+    padding: 15px 30px;
+    font-size: 18px;
+
+    background-color: #9575cd;
+    color: white;
+
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+#start-btn:hover {
+    background-color: #7957b8;
+}
+
+
+/* 11. Footer */
+
+.game-footer {
+    padding: 20px;
+    font-size: 13px;
+    color: #7655ac;
+}
+
+
+/* 12. Responsive Design */
+/* Tablet */
+@media (max-width: 800px) {
+
+    .game-header h1 {
+        font-size: 40px;
+    }
+
+    .game-board {
+        width: 280px;
+        height: 280px;
+    }
+
+    .players {
+        font-size: 18px;
+        gap: 10px;
+    }
+
+    .player {
+        padding: 0 5px;
+    }
+
+    .robot {
+        height: 45vh;
+    }
+}
+
+
+/* Smartphone */
+@media (max-width: 576px) {
+
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .robot {
+        display: none;
+    }
+
+    .players {
+        font-size: 16px;
+        gap: 5px;
+    }
+}

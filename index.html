@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe Spiel</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Header: Titel mit kurzer Beschreibung -->
+      <!-- Hauptcontainer -->
+           <!-- Header: Titel und Beschreibung -->
+        <header class="game-header">
+                <h1>Tic Tac Toe</h1>
+                <p>Spiele, denke und gewinne!</p>
+        </header>
+
+<div class="container">
+
+        <!-- Roboter links -->
+    <div class="robot robot-left"></div>
+
+        <!-- Linke Seite: Spielinhalt -->
+    <main class="game-content">
+
+        <!-- Punktestand der Spieler -->
+        <section class="players" aria-label="Spielerinformationen">  <!--aria-label: بيعطي العنصر اسم أو وصف.-->
+
+            <!-- Spieler X -->
+            <div class="player player-X">
+                <h2>Player X</h2>
+                <p>Wins: <span id="score-x">0</span></p>
+            </div>
+
+            <span class="vs">VS</span>
+
+            <!-- Spieler O -->
+            <div class="player player-O">
+                <h2>Player O</h2>
+                <p>Wins: <span id="score-o">0</span></p>
+            </div>
+
+            </section>
+
+        <!-- Anzeige des aktuellen Spielstatus -->
+        <p id="game-status" role="status" aria-live="polite"> <!--- aria-live: بيخبر قارئ الشاشة لما يتغيّر محتوى عنصر معيّن، حتى يعلن التغيير للمستخدم.-->
+            Ready to play!
+            </p>
+
+        <!-- Spielbereich -->
+        <div class="game-area">
+
+            <!-- Spielfeld mit neun Buttons -->
+            <div class="game-board">
+                <button class="cell" type="button" data-cell-index="0" aria-label="Feld 1"></button>
+                <button class="cell" type="button" data-cell-index="1" aria-label="Feld 2"></button>
+                <button class="cell" type="button" data-cell-index="2" aria-label="Feld 3"></button>
+                <button class="cell" type="button" data-cell-index="3" aria-label="Feld 4"></button>
+                <button class="cell" type="button" data-cell-index="4" aria-label="Feld 5"></button>
+                <button class="cell" type="button" data-cell-index="5" aria-label="Feld 6"></button>
+                <button class="cell" type="button" data-cell-index="6" aria-label="Feld 7"></button>
+                <button class="cell" type="button" data-cell-index="7" aria-label="Feld 8"></button>
+                <button class="cell" type="button" data-cell-index="8" aria-label="Feld 9"></button>
+            </div>
+    </div>
+    
+     <!-- Spiel starten oder neu starten -->
+        <div class="game-controls">
+            <button id="start-btn" type="button">
+                Start Game
+            </button>
+         </div>
+
+         </main>
+      <!-- Roboter rechts -->
+    <div class="robot robot-right"></div>
+    </div>
+
+
+    <!-- Fußbereich: Projektinformationen -->
+    <footer class="game-footer">
+        <p>Made by Ranim ♡</p>
+        <p>HTML · CSS · JavaScript</p>
+        <p>&copy; 2026</p>
+    </footer>
+
+</body>
+</html>
